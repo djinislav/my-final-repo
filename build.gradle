@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.2.0'
+    id 'io.spring.dependency-management' version '1.1.0'
+    id 'application'
+}
+
+repositories {
+    mavenCentral() // Essential for resolving dependencies
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.xerial:sqlite-jdbc:3.36.0.3'
+    implementation 'org.hibernate:hibernate-entitymanager:5.1.0.Final'
+    implementation 'org.hibernate:hibernate-core:5.1.0.Final'       
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+application {
+    mainClass = 'com.movielibrary.MainApplication'
+}

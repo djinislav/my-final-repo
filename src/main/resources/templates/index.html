@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Movie Library</title>
+</head>
+
+<body>
+    <h1>Welcome to Movie Library</h1>
+    <div th:if="${movies}">
+        <ul>
+            <li th:each="movie : ${movies}" th:text="${movie.title}"></li>
+        </ul>
+    </div>
+</body>
+
+</html>
